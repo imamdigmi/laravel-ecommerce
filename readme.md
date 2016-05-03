@@ -18,7 +18,7 @@ Download source code nya di
 https://github.com/imamdigmi/laravel-ecommerce.git
 ```
 
-Install package dependency vendor untuk larave
+Install package dependency vendor untuk laravel
 ```
 composer install
 ```
