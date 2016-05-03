@@ -1,4 +1,4 @@
-Models\<?php
+<?php
 
 return [
 
