@@ -10,6 +10,20 @@ class Category extends Model
         'title', 'parent_id',
     ];
 
+    public static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($model) {
+            // remove relation to products
+            $model->products()->detach();
+            // remove parent from this category's child
+            foreach ($model->childs as $child) {
+                $child->parent_id = '';
+                $child->save();
+            }
+        });
+    }
+
     /*
      | Relationship
      */

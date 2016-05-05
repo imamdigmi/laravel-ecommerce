@@ -4,9 +4,10 @@
     "gulp": "^3.9.1"
   },
   "dependencies": {
-    "laravel-elixir": "^5.0.0",
     "bootstrap-sass": "^3.0.0",
     "font-awesome": "^4.5.0",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "laravel-elixir": "^5.0.0",
+    "sweetalert": "^1.1.3"
   }
 }
