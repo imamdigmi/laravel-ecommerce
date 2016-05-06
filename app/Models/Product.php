@@ -10,6 +10,26 @@ class Product extends Model
         'name', 'photo', 'model', 'price',
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function ($model) {
+            // remove relations to category
+            $model->categories()->detach();
+        });
+    }
+
+    /*
+     | Accessor
+     */
+    public function getCategoryListsAttribute()
+    {
+        if ($this->categories()->count() < 1) {
+            return null;
+        }
+        return $this->categories->lists('id')->all();
+    }
+
     /*
      | Relationship
      */

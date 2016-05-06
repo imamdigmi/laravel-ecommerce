@@ -75,5 +75,11 @@ class ProductsSeeder extends Seeder
         ]);
         $blazer->products()->saveMany([$blazer1, $blazer3]);
         $vest->products()->saveMany([$blazer2, $blazer3]);
+
+        // Copy image sample to public folder
+        $from = database_path('seeds' . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR);
+        $to = public_path('img' . DIRECTORY_SEPARATOR);
+        File::copy($from . 'stub-jacket.jpg', $to . 'stub-jacket.jpg');
+        File::copy($from . 'stub-shoe.jpg', $to . 'stub-shoe.jpg');
     }
 }
