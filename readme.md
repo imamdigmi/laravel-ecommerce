@@ -2,9 +2,8 @@
 Aplikasi ini saya buat untuk teman-teman yang membutuhkan referensi pembuatan aplikasi menggunakan Laravel 5
 
 ## Versi saat ini
-v0.2.2
-
-_Mengacu pada semantyc versioning_
+v0.3.4 --
+_Mengacu pada semantyc versionning_
 
 ## Minimum Requirements
 1. PHP versi 5.6 atau diatasnya
