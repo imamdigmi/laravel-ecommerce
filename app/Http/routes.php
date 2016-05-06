@@ -7,3 +7,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::resource('categories', 'CategoriesController');
+Route::resource('products', 'ProductsController');
